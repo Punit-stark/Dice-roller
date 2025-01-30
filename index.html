@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Simulator</title>
+    <style>
+        .container{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 ;
+            text-align: center;
+            height: 100vh;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        .dice{
+             font-size: 100px;
+             
+        }
+        .roll-animation{
+            animation-name: roll;
+             animation-duration: 1s;
+             animation-fill-mode: forwards;  /* infinity */
+        }
+        @keyframes roll{
+            0%{
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+            100%{
+                transform: rotateY(720deg) rotateX(720deg);
+            }
+        }
+        button{
+            background-color: rgb(96, 154, 219);
+            padding: 10px;
+            width: 100px;
+            border-radius: 20px 20px 20px 20px;
+            border: 0px solid rgb(96, 154, 219);
+            color: white;
+            cursor: pointer;
+            transition: background-color .3s ease;
+        }
+        button:hover{
+            background-color: #2e8baf;
+        }
+        ul{
+            list-style: none;
+            max-width: 600px;
+            padding: 0;
+            margin: 30px auto;
+            /* background-color: antiquewhite; */
+        }
+        li{
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            background-color: aliceblue;
+            box-shadow: 0 2px 2px rgb(0, 0, 0, .3);
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+        span{
+            font-size: 2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dice Roll Simulator</h1>
+        <!-- dice -->
+         <div class="dice" id="dice">&#9860;</div>
+         <button id="roll-button">Roll Dice</button>
+         <ul id="roll-history">
+            <!-- <li>Roll 1: <span>&#9860;</span></li>
+            <li>Roll 2: <span>&#9860;</span></li> -->
+         </ul>
+    </div>
+
+    <script src="index.js">
+    </script>
+</body>
+</html>
